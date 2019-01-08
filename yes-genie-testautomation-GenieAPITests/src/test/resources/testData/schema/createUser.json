@@ -1,0 +1,85 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "RestResponse"
+  ],
+  "properties": {
+    "RestResponse": {
+      "$id": "#/properties/RestResponse",
+      "type": "object",
+      "title": "The Restresponse Schema",
+      "required": [
+        "messages",
+        "result"
+      ],
+      "properties": {
+        "messages": {
+          "$id": "#/properties/RestResponse/properties/messages",
+          "type": "array",
+          "title": "The Messages Schema",
+          "items": {
+            "$id": "#/properties/RestResponse/properties/messages/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "Total [249] records found."
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "result": {
+          "$id": "#/properties/RestResponse/properties/result",
+          "type": "array",
+          "title": "The Result Schema",
+          "items": {
+            "$id": "#/properties/RestResponse/properties/result/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "name",
+              "alpha2_code",
+              "alpha3_code"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/properties/RestResponse/properties/result/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "Afghanistan"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "alpha2_code": {
+                "$id": "#/properties/RestResponse/properties/result/items/properties/alpha2_code",
+                "type": "string",
+                "title": "The Alpha2_code Schema",
+                "default": "",
+                "examples": [
+                  "AF"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "alpha3_code": {
+                "$id": "#/properties/RestResponse/properties/result/items/properties/alpha3_code",
+                "type": "string",
+                "title": "The Alpha3_code Schema",
+                "default": "",
+                "examples": [
+                  "AFG"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

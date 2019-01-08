@@ -1,0 +1,245 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "records",
+    "count",
+    "searchParams"
+  ],
+  "properties": {
+    "records": {
+      "$id": "#/properties/records",
+      "type": "array",
+      "title": "The Records Schema",
+      "items": {
+        "$id": "#/properties/records/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "mdmId",
+          "custId",
+          "customerName",
+          "city",
+          "addressArea",
+          "homeBranch",
+          "assetRM",
+          "liabilityRM",
+          "groupId",
+          "businessSegment",
+          "partnerSegment",
+          "customerOpenDate",
+          "customerSearchEnabled",
+          "custType",
+          "linkedMdmId",
+          "created",
+          "DOB"
+        ],
+        "properties": {
+          "mdmId": {
+            "$id": "#/properties/records/items/properties/mdmId",
+            "type": "integer",
+            "title": "The Mdmid Schema",
+            "default": 0,
+            "examples": [
+              810010
+            ]
+          },
+          "custId": {
+            "$id": "#/properties/records/items/properties/custId",
+            "type": "integer",
+            "title": "The Custid Schema",
+            "default": 0,
+            "examples": [
+              210010
+            ]
+          },
+          "customerName": {
+            "$id": "#/properties/records/items/properties/customerName",
+            "type": "string",
+            "title": "The Customername Schema",
+            "default": "",
+            "examples": [
+              "Ayush"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "city": {
+            "$id": "#/properties/records/items/properties/city",
+            "type": "string",
+            "title": "The City Schema",
+            "default": "",
+            "examples": [
+              "Delhi"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "addressArea": {
+            "$id": "#/properties/records/items/properties/addressArea",
+            "type": "string",
+            "title": "The Addressarea Schema",
+            "default": "",
+            "examples": [
+              "Fort, karnal"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "homeBranch": {
+            "$id": "#/properties/records/items/properties/homeBranch",
+            "type": "string",
+            "title": "The Homebranch Schema",
+            "default": "",
+            "examples": [
+              "9899"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "assetRM": {
+            "$id": "#/properties/records/items/properties/assetRM",
+            "type": "string",
+            "title": "The Assetrm Schema",
+            "default": "",
+            "examples": [
+              "customer25"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "liabilityRM": {
+            "$id": "#/properties/records/items/properties/liabilityRM",
+            "type": "string",
+            "title": "The Liabilityrm Schema",
+            "default": "",
+            "examples": [
+              "rahul customer35"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "groupId": {
+            "$id": "#/properties/records/items/properties/groupId",
+            "type": "string",
+            "title": "The Groupid Schema",
+            "default": "",
+            "examples": [
+              "274337"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "businessSegment": {
+            "$id": "#/properties/records/items/properties/businessSegment",
+            "type": "string",
+            "title": "The Businesssegment Schema",
+            "default": "",
+            "examples": [
+              "BRB"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "partnerSegment": {
+            "$id": "#/properties/records/items/properties/partnerSegment",
+            "type": "string",
+            "title": "The Partnersegment Schema",
+            "default": "",
+            "examples": [
+              "RB"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "customerOpenDate": {
+            "$id": "#/properties/records/items/properties/customerOpenDate",
+            "type": "string",
+            "title": "The Customeropendate Schema",
+            "default": "",
+            "examples": [
+              "03-May-2011"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "customerSearchEnabled": {
+            "$id": "#/properties/records/items/properties/customerSearchEnabled",
+            "type": "boolean",
+            "title": "The Customersearchenabled Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "custType": {
+            "$id": "#/properties/records/items/properties/custType",
+            "type": "string",
+            "title": "The Custtype Schema",
+            "default": "",
+            "examples": [
+              "I"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "linkedMdmId": {
+            "$id": "#/properties/records/items/properties/linkedMdmId",
+            "type": "integer",
+            "title": "The Linkedmdmid Schema",
+            "default": 0,
+            "examples": [
+              311110
+            ]
+          },
+          "created": {
+            "$id": "#/properties/records/items/properties/created",
+            "type": "string",
+            "title": "The Created Schema",
+            "default": "",
+            "examples": [
+              "03-May-2011"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "DOB": {
+            "$id": "#/properties/records/items/properties/DOB",
+            "type": "string",
+            "title": "The Dob Schema",
+            "default": "",
+            "examples": [
+              "15-May-1990"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "count": {
+      "$id": "#/properties/count",
+      "type": "integer",
+      "title": "The Count Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "searchParams": {
+      "$id": "#/properties/searchParams",
+      "type": "object",
+      "title": "The Searchparams Schema",
+      "required": [
+        "custId"
+      ],
+      "properties": {
+        "custId": {
+          "$id": "#/properties/searchParams/properties/custId",
+          "type": "array",
+          "title": "The Custid Schema",
+          "items": {
+            "$id": "#/properties/searchParams/properties/custId/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "210010"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}
